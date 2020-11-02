@@ -62,6 +62,13 @@ class LinkedList:
         c.link = p.link
         p.link = c
 
+    def remove_Last(self):
+        p = self.head
+        while(p.link is not None):
+            prev  = p
+            p = p.link
+        prev.link = None
+
     def createLinkedList(self):
         size = int(input("Enter the number of Nodes: "))
         for i in range(size):
