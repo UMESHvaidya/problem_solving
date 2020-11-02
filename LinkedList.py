@@ -46,8 +46,7 @@ class LinkedList:
     def search(self,val):
         p, i = self.head, 0
         while p:
-            if p.data == val:
-                return "Found at index {}".format(i)
+            if p.data == val:return "Found at index {}".format(i)
             else:
                 p = p.link
                 i += 1
