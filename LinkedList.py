@@ -38,7 +38,6 @@ class LinkedList:
         if self.head is None:
             self.head = a
             return
-
         p = self.head
         while p.link is not None:
             p = p.link
@@ -52,13 +51,7 @@ class LinkedList:
             else:
                 p = p.link
                 i += 1
-        else: return "Not Found"
-
-    def createLinkedList(self):
-        size = int(input("Enter the number of Nodes: "))
-        for i in range(size):
-            data = input("Enter the data: ")
-            self.insertAtEnd(data)
+        else:return "Not Found"
 
     def insertAtPosition(self,val,pos):
         c = Node(val)
@@ -69,6 +62,12 @@ class LinkedList:
             i += 1
         c.link = p.link
         p.link = c
+
+    def createLinkedList(self):
+        size = int(input("Enter the number of Nodes: "))
+        for i in range(size):
+            data = input("Enter the data: ")
+            self.insertAtEnd(data)
 
 list = LinkedList()
 list.createLinkedList()
